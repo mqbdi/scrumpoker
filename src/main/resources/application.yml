@@ -1,0 +1,11 @@
+logging:
+  level:
+    com:
+      github:
+        mqbdi:
+          scrumpoker: DEBUG
+server:
+  port : 18080
+  servlet:
+    context-path: /
+# http://localhost:18080/swagger-ui/index.html
