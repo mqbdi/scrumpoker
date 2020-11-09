@@ -4,8 +4,30 @@ logging:
       github:
         mqbdi:
           scrumpoker: DEBUG
+spring:
+  application:
+    name : Scrum Poker Application
+  thymeleaf:
+    cache: false
+    enable: true
+    check-template: true
+    check-template-location: true
+    prefix: classpath:/templates/
+    suffix: .html
+  jpa:
+    generate-ddl: true
+    hibernate.ddl-auto: update
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:bootapp;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+
 server:
   port : 18080
+  error:
+    path: /error
+    whitelabel.enabled: false
   servlet:
     context-path: /
 # http://localhost:18080/swagger-ui/index.html
