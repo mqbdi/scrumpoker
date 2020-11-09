@@ -1,9 +1,13 @@
+# https://springframework.guru/using-yaml-in-spring-boot-to-configure-logback/
 logging:
+  file: scrumpoker.log
+  pattern:
+    console: "%d %-5p [%c %M %L] - %m%n"
+    file: "%d %-5level [%thread] %logger : %msg%n"
   level:
-    com:
-      github:
-        mqbdi:
-          scrumpoker: DEBUG
+    root: WARN
+    mqbdi:
+      scrumpoker: DEBUG
 spring:
   application:
     name : Scrum Poker Application
@@ -31,3 +35,9 @@ server:
   servlet:
     context-path: /
 # http://localhost:18080/swagger-ui/index.html
+
+# https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-health
+management:
+  endpoint:
+    health:
+      show-details: always

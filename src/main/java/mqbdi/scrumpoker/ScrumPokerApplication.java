@@ -24,7 +24,11 @@ public class ScrumPokerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication springApplication = new SpringApplication(ScrumPokerApplication.class);
+		log.trace("Scrum Poker starting ...");
 		log.debug("Scrum Poker starting ...");
+		log.info("Scrum Poker starting ...");
+		log.warn("Scrum Poker starting ...");
+		log.error("Scrum Poker starting ...");
 		springApplication.run(args);
 	}
 
